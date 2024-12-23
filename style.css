@@ -1,0 +1,293 @@
+@charset "UTF-8";
+
+html {
+  font-size: 100%;
+}
+
+body {
+  font-family: "Helvetica Neue", "Arial", "Hiragino Sans",
+    "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+li {
+  list-style: none;
+}
+
+#header {
+  width: 100%;
+  height: 600px;
+  min-height: 100vh;
+  background-image: url(../img/mainvisual.jpg);
+  background-size: cover;
+  background-position: center, top;
+  background-repeat: no-repeat;
+  position: relative;
+  padding: 20px 40px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: flex-end;
+}
+
+nav ul li {
+  margin-left: 30px;
+}
+
+nav ul li a {
+  font-weight: bold;
+  color: #ffffff;
+  transition: all 0.3s ease;
+  filter: drop-shadow(1px 1px 2px #121212);
+}
+
+nav ul li a:hover {
+  color: #e03131;
+}
+
+.wrapper {
+  max-width: 1000px;
+  padding: 90px 16px 150px 16px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.fixed-bg {
+  height: 300px;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+.site-title {
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  filter: drop-shadow(1px 1px 10px #c0c0c0);
+}
+
+.sec-title {
+  font-size: 4.5rem;
+  font-weight: bold;
+  color: #ffffff;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  filter: drop-shadow(1px 1px 10px #c0c0c0);
+}
+
+.item-title {
+  font-size: 2.75rem;
+  margin-bottom: 70px;
+  border-bottom: 5px solid #e03131;
+  display: inline-block;
+}
+
+/* menuコンテンツのみに反映させるcss */
+#menu {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-image: url(../img/menu.jpg);
+
+}
+
+#menu .menu-img {
+  /* background-image: url(../img/menu.jpg); */
+  position: relative;
+}
+
+
+#menu .menu-content {
+  display: flex;
+}
+
+#menu .menu-item {
+  width: 50%;
+  padding: 0 45px;
+}
+
+#menu .menu-item:first-child {
+  border-right: solid 1px #000;
+}
+
+#menu .menu-item dl {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#menu .menu-item dt {
+  width: 87%;
+  text-align: left;
+  border-bottom: dotted 1px #000;
+  margin-bottom: 25px;
+}
+
+#menu .menu-item dd {
+  width: 13%;
+}
+
+#menu .food {
+  margin-bottom: 83px;
+}
+
+/* aboutコンテンツのみに反映させるcss */
+#about .about-img {
+  background-image: url(../img/about.jpg);
+  position: relative;
+}
+
+#about ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#about li {
+  width: 50%;
+  text-align: left;
+  line-height: 2;
+  padding: 2%;
+}
+
+#about .btn {
+  display: inline-block;
+  width: 250px;
+  text-align: center;
+  text-decoration: none;
+  line-height: 60px;
+  outline: none;
+  color: #e03131;
+  background-color: #fff;
+  position: relative;
+  border: 1px solid #e03131;
+  transition: color 0.5s ease;
+  margin-top: 30px;
+}
+
+#about .btn:hover {
+  color: black;
+}
+#about .btn:hover::before {
+  transform: scaleY(1);
+}
+
+#about .btn::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: hsl(0, 19%, 93%);
+  transform: scaleY(0);
+  transition: all 0.5s ease;
+  transition-property: transform;
+}
+
+#about .btn .text {
+  position: relative;
+}
+
+/* locationコンテンツのみに反映させるcss */
+#location .location-img {
+  background-image: url(../img/location.jpg);
+  position: relative;
+}
+
+#location .item-map {
+  margin-bottom: 20px;
+  filter: grayscale(1);
+}
+
+#location .item-map iframe {
+  width: 100%;
+}
+
+#location .item-info {
+  text-align: left;
+}
+
+#location .item-info p {
+  margin-bottom: 10px;
+}
+
+/* フッター */
+#footer {
+  font-size: 0.5rem;
+  text-align: center;
+}
+
+@media screen and (max-width: 767px) {
+  .site-title {
+    top: 42%;
+  }
+  .sec-title {
+    font-size: 2rem;
+    top: 26%;
+  }
+
+  .item-title {
+    font-size: 1.25rem;
+    margin-bottom: 25px;
+  }
+
+  .fixed-bg {
+    height: 94px;
+    background-attachment: scroll;
+  }
+
+  .wrapper {
+    padding: 30px 16px 60px 16px;
+  }
+
+  /* menu */
+  #menu {
+    margin-top: 10px;
+  }
+
+  #menu .menu-content {
+    flex-direction: column;
+  }
+
+  #menu .menu-item {
+    width: 100%;
+    padding: 0%;
+  }
+
+  #menu .menu-item:first-child {
+    border-right: none;
+  }
+
+  #menu .menu-item dl {
+    margin-bottom: 10px;
+  }
+
+  #menu .menu-item dl.food {
+    margin-bottom: 10px
+  }
+
+  /*-------------------------------------------
+  About
+  -------------------------------------------*/
+  #about ul {
+    flex-direction: column;
+  }
+  #about li {
+    width: 100%;
+  }
+
+}
